@@ -7,7 +7,7 @@
   <meta charset="UTF-8">
   <!-- Title of the page -->
   <title>Undergrad Landscaping</title>
-
+  <meta name="viewport" content="width=device-width">
   <!-- Links to the CSS file -->
   <link rel="stylesheet" href="../CSS/index.css">
 
@@ -21,7 +21,7 @@
   <!-- Home About Services Contact | Login -->
   <div class="Header">
     <nav class="nav">
-      <a href="/"><img class="LogoIcon" src="../Photo/LogoIcon.PNG"></a>
+      <a href="/"><img class="LogoIcon" alt="picture" src="../Photo/LogoIcon.PNG"></a>
       <ul class="ul">
         <li><a href="/services/">Services</a></li>
         <li><a href="/portfolio/">Portfolio</a></li>
@@ -36,7 +36,7 @@
   <div class="FirstSection">
     <div class="FirstSectionText">
       <div class="DivHomeLogo">
-        <img id="ImgHomeLogo" src="../Photo/Logo.png">
+        <img id="ImgHomeLogo" alt="picture" src="../Photo/Logo.png">
       </div>
 
       <div class="DivHomeDescription">
@@ -158,16 +158,21 @@
   </main>
 
   <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/dzqDU9efnnk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/dzqDU9efnnk" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
   </div>
 
 
 
-
+  <script>
+    const container = document.querySelector('.container');
+    document.querySelector('.slider').addEventListener('input', (e) => {
+      container.style.setProperty('--position', `${e.target.value}%`);
+    });
+  </script>
+  <script src="Scipt/index.js"></script>
+  
 
 
 </body>
 
-<!-- Links to the JavaScript file -->
-<script src="Scipt/Script.js"></script>
 </html>
