@@ -1,14 +1,11 @@
-const netlifyIdentity = require('netlify-identity-widget');
+// Open the modal
+netlifyIdentity.open();
 
-netlifyIdentity.init({
-  container: '#netlify-modal', // defaults to document.body
-  locale: 'en' // defaults to 'en'
-});
+// Get the current user:
+// Available after on('init') is invoked
+const user = netlifyIdentity.currentUser();
 
-netlifyIdentity.open(); // open the modal
-netlifyIdentity.open('login'); // open the modal to the login tab
-netlifyIdentity.open('signup'); // open the modal to the signup tab
-
+// Bind to events
 netlifyIdentity.on('init', user => console.log('init', user));
 netlifyIdentity.on('login', user => console.log('login', user));
 netlifyIdentity.on('logout', () => console.log('Logged out'));
@@ -26,14 +23,10 @@ netlifyIdentity.close();
 // Log out the user
 netlifyIdentity.logout();
 
-// refresh the user's JWT
+// Refresh the user's JWT
+// Call in on('login') handler to ensure token refreshed after it expires (1hr)  
 // Note: this method returns a promise.
 netlifyIdentity.refresh().then((jwt)=>console.log(jwt))
 
 // Change language
 netlifyIdentity.setLocale('en');
-
-// Access the underlying GoTrue JS client.
-// Note that doing things directly through the GoTrue client brings a risk of getting out of
-// sync between your state and the widget’s state.
-netlifyIdentity.gotrue;
