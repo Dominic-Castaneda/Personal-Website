@@ -14,40 +14,17 @@
 
 
 <body>
-
   <!-- Home About Services Contact | Login -->
   <div id="navbarContainer"></div>
-
-
-
-  
 
   <div class="FirstSection"> 
     <h1 id="Title">Services</h1>
     <p>HUENFIODINDFMKD VKD KV KD VKD KDKDKD</p>
   </div>
 
-  
+  <!-- Load Scripts at the end of the body -->
   <script src="/JS/loadNavbar.js"></script>
-  <script src="../JS/main.js"></script>
+  <script src="../JS/identityHandlers.js"></script>
 </body>
-
-<script>
-  window.netlifyIdentity.on('init', function(user) {
-    if (user) {
-      document.getElementById('authControl').innerHTML = `<a href="#" onclick="event.preventDefault(); netlifyIdentity.logout();">Logout</a>`;
-    }
-  });
-
-  window.netlifyIdentity.on('login', function(user) {
-    console.log('User has logged in:', user);
-    document.getElementById('authControl').innerHTML = `<a href="#" onclick="event.preventDefault(); netlifyIdentity.logout();">Logout</a>`;
-  });
-
-  window.netlifyIdentity.on('logout', function() {
-    console.log('User has logged out.');
-    document.getElementById('authControl').innerHTML = `<a href="#" onclick="event.preventDefault(); netlifyIdentity.open();">Login</a>`;
-  });
-</script>
 
 </html>

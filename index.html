@@ -15,8 +15,7 @@
 <body>
 
   <!-- Home About Services Contact | Login -->
-  <div id="navbarContainer">
-  </div>
+  <div id="navbarContainer"></div>
 
 
   <div class="FirstSection">
@@ -149,32 +148,14 @@
 
 
   <script src="../JS/loadNavbar.js"></script>
+  <script src="../JS/index.js"></script>
+  <script src="../JS/identityHandlers.js"></script>
   <script>
     const container = document.querySelector('.container');
     document.querySelector('.slider').addEventListener('input', (e) => {
       container.style.setProperty('--position', `${e.target.value}%`);
     });
   </script>
-  <script src="../JS/index.js"></script>
-  <script src="../JS/main.js"></script>
 </body>
-
-<script>
-  window.netlifyIdentity.on('init', function(user) {
-    if (user) {
-      document.getElementById('authControl').innerHTML = `<a href="#" onclick="event.preventDefault(); netlifyIdentity.logout();">Logout</a>`;
-    }
-  });
-
-  window.netlifyIdentity.on('login', function(user) {
-    console.log('User has logged in:', user);
-    document.getElementById('authControl').innerHTML = `<a href="#" onclick="event.preventDefault(); netlifyIdentity.logout();">Logout</a>`;
-  });
-
-  window.netlifyIdentity.on('logout', function() {
-    console.log('User has logged out.');
-    document.getElementById('authControl').innerHTML = `<a href="#" onclick="event.preventDefault(); netlifyIdentity.open();">Login</a>`;
-  });
-</script>
 
 </html>

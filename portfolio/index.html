@@ -2,44 +2,22 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Undergrad Landscaping</title>
-  <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="../CSS/portfolio.css">
-  <link rel="stylesheet" href="../CSS/main.css">
-  <link rel="icon" href=../Photo/LogoIconBlack.png type="image/x-icon">
-  <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <meta charset="UTF-8">
+    <title>Undergrad Landscaping</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="../CSS/portfolio.css">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="icon" href=../Photo/LogoIconBlack.png type="image/x-icon">
+    <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 
-
 <body>
+    <!-- Home About Services Contact | Login -->
+    <div id="navbarContainer"></div>
 
-  <!-- Home About Services Contact | Login -->
-  <div id="navbarContainer"></div>
-
-
-
-  
-  <script src="/JS/loadNavbar.js"></script>
-  <script src="../JS/main.js"></script>
+    <!-- Load Scripts at the end of the body -->
+    <script src="/JS/loadNavbar.js"></script>
+    <script src="../JS/identityHandlers.js"></script>
 </body>
-
-<script>
-  window.netlifyIdentity.on('init', function(user) {
-    if (user) {
-      document.getElementById('authControl').innerHTML = `<a href="#" onclick="event.preventDefault(); netlifyIdentity.logout();">Logout</a>`;
-    }
-  });
-
-  window.netlifyIdentity.on('login', function(user) {
-    console.log('User has logged in:', user);
-    document.getElementById('authControl').innerHTML = `<a href="#" onclick="event.preventDefault(); netlifyIdentity.logout();">Logout</a>`;
-  });
-
-  window.netlifyIdentity.on('logout', function() {
-    console.log('User has logged out.');
-    document.getElementById('authControl').innerHTML = `<a href="#" onclick="event.preventDefault(); netlifyIdentity.open();">Login</a>`;
-  });
-</script>
 
 </html>
