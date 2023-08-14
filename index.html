@@ -156,6 +156,15 @@
     });
   </script>
   <script src="../JS/index.js"></script>
+  <script src="../JS/main.js"></script>
 </body>
+
+<script>
+  document.getElementById('authControl').addEventListener('click', function(event) {
+      event.preventDefault();
+      netlifyIdentity.open();
+  });
+</script>
+
 
 </html>
