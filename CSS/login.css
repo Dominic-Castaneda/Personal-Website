@@ -211,3 +211,12 @@ html,body {
   ::-webkit-scrollbar-thumb:hover {
     background-color: #555555;
   }
+
+li::marker {
+    /* hide the marker */
+    font-size: 0px;
+}
+
+.netlify-identity-signup {
+    font-size: 100px;
+}
