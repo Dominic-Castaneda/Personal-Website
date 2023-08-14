@@ -1,94 +1,39 @@
-function setFormMessage(formElement, type, message) {
-    const messageElement = formElement.querySelector(".form__message");
+const netlifyIdentity = require('netlify-identity-widget');
 
-    messageElement.textContent = message;
-    messageElement.classList.remove("form__message--success", "form__message--error");
-    messageElement.classList.add(`form__message--${type}`);
-}
-
-function setInputError(inputElement, message) {
-    inputElement.classList.add("form__input--error");
-    inputElement.parentElement.querySelector(".form__input-error-message").textContent = message;
-}
-
-function clearInputError(inputElement) {
-    inputElement.classList.remove("form__input--error");
-    inputElement.parentElement.querySelector(".form__input-error-message").textContent = "";
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    const loginForm = document.querySelector("#login");
-    const createAccountForm = document.querySelector("#createAccount");
-
-    document.querySelector("#linkCreateAccount").addEventListener("click", e => {
-        e.preventDefault();
-        loginForm.classList.add("form--hidden");
-        createAccountForm.classList.remove("form--hidden");
-    });
-
-    document.querySelector("#linkLogin").addEventListener("click", e => {
-        e.preventDefault();
-        loginForm.classList.remove("form--hidden");
-        createAccountForm.classList.add("form--hidden");
-    });
-
-    loginForm.addEventListener("submit", e => {
-        e.preventDefault();
-
-        const email = loginForm.querySelector('input[placeholder="Email"]').value;
-        const password = loginForm.querySelector('input[placeholder="Password"]').value;
-
-        if (!/\S+@\S+\.\S+/.test(email)) {
-            setInputError(loginForm.querySelector('input[placeholder="Email"]'), "Please enter a valid email address.");
-            return;
-        }
-
-        // Continue with AJAX/Fetch login
-        // Example error message:
-        setFormMessage(loginForm, "error", "Invalid email/password combination");
-    });
-
-    createAccountForm.addEventListener("submit", e => {
-        e.preventDefault();
-
-        const firstName = createAccountForm.querySelector('input[placeholder="First Name"]').value;
-        const lastName = createAccountForm.querySelector('input[placeholder="Last Name"]').value;
-        const email = createAccountForm.querySelector('input[placeholder="Email"]').value;
-        const password = createAccountForm.querySelector('input[placeholder="Password"]').value;
-
-        if (firstName.length < 3) {
-            setInputError(createAccountForm.querySelector('input[placeholder="First Name"]'), "First Name must be at least 3 characters.");
-            return;
-        }
-
-        if (lastName.length < 3) {
-            setInputError(createAccountForm.querySelector('input[placeholder="Last Name"]'), "Last Name must be at least 3 characters.");
-            return;
-        }
-
-        if (!/\S+@\S+\.\S+/.test(email)) {
-            setInputError(createAccountForm.querySelector('input[placeholder="Email"]'), "Please enter a valid email address.");
-            return;
-        }
-
-        // Continue with AJAX/Fetch registration
-        // Example error message:
-        setFormMessage(createAccountForm, "error", "Failed to create an account.");
-    });
-
-    document.querySelectorAll(".form__input").forEach(inputElement => {
-        inputElement.addEventListener("input", e => {
-            clearInputError(inputElement);
-        });
-    });
+netlifyIdentity.init({
+  container: '#netlify-modal', // defaults to document.body
+  locale: 'en' // defaults to 'en'
 });
 
+netlifyIdentity.open(); // open the modal
+netlifyIdentity.open('login'); // open the modal to the login tab
+netlifyIdentity.open('signup'); // open the modal to the signup tab
 
-// Open the login modal
-netlifyIdentity.open();
-
-// Handle events
 netlifyIdentity.on('init', user => console.log('init', user));
 netlifyIdentity.on('login', user => console.log('login', user));
 netlifyIdentity.on('logout', () => console.log('Logged out'));
-//... Add other event handlers as needed
+netlifyIdentity.on('error', err => console.error('Error', err));
+netlifyIdentity.on('open', () => console.log('Widget opened'));
+netlifyIdentity.on('close', () => console.log('Widget closed'));
+
+// Unbind from events
+netlifyIdentity.off('login'); // to unbind all registered handlers
+netlifyIdentity.off('login', handler); // to unbind a single handler
+
+// Close the modal
+netlifyIdentity.close();
+
+// Log out the user
+netlifyIdentity.logout();
+
+// refresh the user's JWT
+// Note: this method returns a promise.
+netlifyIdentity.refresh().then((jwt)=>console.log(jwt))
+
+// Change language
+netlifyIdentity.setLocale('en');
+
+// Access the underlying GoTrue JS client.
+// Note that doing things directly through the GoTrue client brings a risk of getting out of
+// sync between your state and the widget’s state.
+netlifyIdentity.gotrue;
