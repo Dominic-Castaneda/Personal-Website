@@ -82,3 +82,13 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+
+// Open the login modal
+netlifyIdentity.open();
+
+// Handle events
+netlifyIdentity.on('init', user => console.log('init', user));
+netlifyIdentity.on('login', user => console.log('login', user));
+netlifyIdentity.on('logout', () => console.log('Logged out'));
+//... Add other event handlers as needed
