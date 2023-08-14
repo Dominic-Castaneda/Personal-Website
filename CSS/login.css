@@ -1,3 +1,6 @@
+html{
+    overflow-y: scroll;
+}
 html,body {
     --color-primary: #393a39;
     --color-primary-dark: #232423;
@@ -6,7 +9,6 @@ html,body {
     --color-success: #4bb544;
     --border-radius: 4px;
     
-    overflow-y: scroll;
     background: linear-gradient(to bottom, #000000, #1f1e1e);
     padding: 0;
     font-family: Arial, sans-serif;
@@ -176,4 +178,36 @@ html,body {
 
 .form__link:hover {
     text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+/* Styling the scrollbar track (background) */
+::-webkit-scrollbar {
+    width: 10px; /* width of the entire scrollbar */
+    background-color: #F5F5F5; /* background color of the scrollbar track */
+}
+
+/* Styling the handle (draggable part) of the scrollbar */
+::-webkit-scrollbar-thumb {
+    background-color: #333333; /* color of the scrollbar thumb */
+    border-radius: 4px; /* roundness of the scrollbar thumb */
+    border: 2px solid #F5F5F5; /* creates padding effect */
+}
+
+/* Styling the buttons on the scrollbar (up and down arrows, not always present) */
+::-webkit-scrollbar-button {
+    display: none; /* this will hide the buttons */
+}
+
+/* Styling the draggable scrolling handle when hovering */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555555;
 }
