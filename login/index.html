@@ -28,23 +28,14 @@
     </nav>
   </div>
 
+  <div id="netlify-modal">
+      <!-- Add a menu:
+      Log in / Sign up - when the user is not logged in
+      Username / Log out - when the user is logged in
+      -->
+      <div data-netlify-identity-menu></div>
 
-    <!-- Add a menu:
-   Log in / Sign up - when the user is not logged in
-   Username / Log out - when the user is logged in -->
-
-
-  <div data-netlify-identity-menu></div>
-
-  <!-- Add a simpler button:
-    Simple button that will open the modal.
-  -->
-  <div data-netlify-identity-button>Login with Netlify Identity</div>
-  {
-    container: '#some-query-selector'; // container to attach to
-    APIUrl: 'https://www.example.com/.netlify/functions/identity'; // Absolute url to endpoint.  ONLY USE IN SPECIAL CASES!
-    namePlaceholder: 'some-placeholder-for-Name'; // custom placeholder for name input form
-    locale: 'en'; // language code for translations - available: en, fr, es, pt, hu, pl, cs, sk - default to en
+  </div>
 
 
 </body>
@@ -52,3 +43,4 @@
 <script src="../JS/login.js"></script>
 
 </html>
+
