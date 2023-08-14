@@ -6,6 +6,7 @@ html,body {
     --color-success: #4bb544;
     --border-radius: 4px;
     
+    overflow-y: scroll;
     background: linear-gradient(to bottom, #000000, #1f1e1e);
     padding: 0;
     font-family: Arial, sans-serif;
