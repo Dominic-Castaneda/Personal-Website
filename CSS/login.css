@@ -2,8 +2,8 @@ html{
     overflow-y: scroll;
 }
 html,body {
-    --color-primary: #009579;
-    --color-primary-dark: #007f67;
+    --color-primary: #393a39;
+    --color-primary-dark: #232423;
     --color-secondary: #252c6a;
     --color-error: #cc3333;
     --color-success: #4bb544;
