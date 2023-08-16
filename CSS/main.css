@@ -57,38 +57,41 @@ body {
 
 /* New styles for mobile view */
 .menu-icon {
-  display: none; /* Hidden by default */
-  font-size: 30px;
-  cursor: pointer;
-}
-
-/* Media Query for screens smaller than 768px */
-@media only screen and (max-width: 768px) {
-    .nav {
-        padding-left: 20px; /* Reduce padding for mobile for better spacing */
-    }
-    .nav .ul {
-        display: none; /* Hide the menu on mobile by default */
-        flex-direction: column; /* Stack the links vertically */
-        position: absolute;
-        top: 65px; /* height of .Header */
-        width: 100%;
-        background-color: rgba(25, 25, 27, 0.7);
-        z-index: 1;
-    }
-    .nav .ul li {
-        display: block; /* Stack the list items on top of each other */
-        margin: 0;
-        text-align: center; 
-    }
-    .nav .ul li a {
-        padding: 10px;
-        display: block; /* Make the links full width */
-    }
-    .menu-icon {
-        display: block; /* Show the hamburger icon on mobile */
-    }
-}
+    display: none; /* Hidden by default */
+    font-size: 30px;
+    cursor: pointer;
+    color: white;  /* Set the color to white */
+  }
+  
+  /* Media Query for screens smaller than 768px */
+  @media only screen and (max-width: 768px) {
+      .nav {
+          padding-left: 20px; /* Reduce padding for mobile for better spacing */
+          justify-content: space-between; /* Positions logo to left and menu icon to right */
+      }
+      .nav .ul {
+          display: none; /* Hide the menu on mobile by default */
+          flex-direction: column; /* Stack the links vertically */
+          position: absolute;
+          top: 65px; /* height of .Header */
+          right: 0; /* Makes sure the dropdown is aligned to the right */
+          width: 50%; /* Adjust width of dropdown as needed */
+          background-color: rgba(25, 25, 27, 0.7);
+          z-index: 1;
+      }
+      .nav .ul li {
+          display: block; /* Stack the list items on top of each other */
+          margin: 0;
+          text-align: center; 
+      }
+      .nav .ul li a {
+          padding: 10px;
+          display: block; /* Make the links full width */
+      }
+      .menu-icon {
+          display: block; /* Show the hamburger icon on mobile */
+      }
+  }
 
 
 
