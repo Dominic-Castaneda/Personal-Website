@@ -10,4 +10,13 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+function toggleMenu() {
+  var ul = document.querySelector(".nav .ul");
+  if (ul.style.display === "none" || ul.style.display === "") {
+      ul.style.display = "block";
+  } else {
+      ul.style.display = "none";
+  }
+}
+
   

@@ -9,7 +9,7 @@ body {
 }
 
 
-/*  Navbar   */
+/* Navbar Styles */
 .Header {
     background-color: rgba(25, 25, 27, 0.7);
     height: 65px;
@@ -23,32 +23,73 @@ body {
     place-content: center;
     background-blend-mode: 50%;
 }
+
 .nav {
     display: flex;
     align-items: center;
     padding-left: 100px;
 }
+
 .nav a .LogoIcon {
     height: 50px;
     width: auto;
     margin-right: 65px;
     vertical-align: middle;
 }
+
 .nav .ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
+
 .nav .ul li {
     display: inline;
     margin: 0 65px;
     color: #fff;
 }
+
 .nav .ul li a {
     color: #d8d4d4;
     text-decoration: none;
     font-size: 17px;
 }
+
+/* New styles for mobile view */
+.menu-icon {
+  display: none; /* Hidden by default */
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Media Query for screens smaller than 768px */
+@media only screen and (max-width: 768px) {
+    .nav {
+        padding-left: 20px; /* Reduce padding for mobile for better spacing */
+    }
+    .nav .ul {
+        display: none; /* Hide the menu on mobile by default */
+        flex-direction: column; /* Stack the links vertically */
+        position: absolute;
+        top: 65px; /* height of .Header */
+        width: 100%;
+        background-color: rgba(25, 25, 27, 0.7);
+        z-index: 1;
+    }
+    .nav .ul li {
+        display: block; /* Stack the list items on top of each other */
+        margin: 0;
+        text-align: center; 
+    }
+    .nav .ul li a {
+        padding: 10px;
+        display: block; /* Make the links full width */
+    }
+    .menu-icon {
+        display: block; /* Show the hamburger icon on mobile */
+    }
+}
+
 
 
 /* Styling the scrollbar track (background) */
