@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Undergrad Landscaping</title>
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../CSS/index.css">
   <link rel="stylesheet" href="../CSS/main.css">
   <link rel="icon" href=../Photo/LogoIconBlack.png type="image/x-icon">
@@ -28,11 +28,48 @@
         <h4 id="HomeLogoDescription">Professional college student landscapers that transform your outdoor space.</h4>
       </div>
       <div class="DivHomeButton">
-        <button id="HomeButton">Explore</button>
+        <button id="HomeButton" onclick="scrollToSlideShow()">Explore</button>
       </div>
     </div>
   </div>
 
+  <br>
+  <br>
+  <br>
+  <h1 id="SlideShowTitle">Featured Now Services</h1>
+  <br>
+  <br>
+  <!-- Slide Show -->
+  <div class="slidershow">
+    <div class="list">
+        <div class="item">
+            <img src="../Photo/after.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="../Photo/after.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="../Photo/after.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="../Photo/after.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="../Photo/after.jpg" alt="">
+        </div>
+    </div>
+    <div class="buttons">
+        <button id="prev">></button>
+        <button id="next">></button>
+    </div>
+    <ul class="dots">
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+  </div>
   <br>
   <br>
   <br>
@@ -150,12 +187,6 @@
   <script src="../JS/loadNavbar.js"></script>
   <script src="../JS/index.js"></script>
   <script src="../JS/identityHandlers.js"></script>
-  <script>
-    const container = document.querySelector('.container');
-    document.querySelector('.slider').addEventListener('input', (e) => {
-      container.style.setProperty('--position', `${e.target.value}%`);
-    });
-  </script>
 </body>
 
 </html>

@@ -80,16 +80,92 @@
 }
 
 
+#SlideShowTitle {
+  color: white;
+  font-style: italic;
+  font-size: 40px;
+  font-weight: 50;
+  display: flex;
+  justify-content: center;
+}
+
+
+/* Slide Show */
+.slidershow{
+  width: 1300px;
+  max-width: 100vw;
+  height: 700px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+.slidershow .list{
+  position: absolute;
+  width: max-content;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  transition: 1s;
+}
+.slidershow .list img{
+  width: 1300px;
+  max-width: 100vw;
+  height: 100%;
+  object-fit: cover;
+}
+.slidershow .buttons{
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+.slidershow .buttons button{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff5;
+  color: #fff;
+  border: none;
+  font-family: monospace;
+  font-weight: bold;
+}
+.slidershow .dots{
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: #fff;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.slidershow .dots li{
+  list-style: none;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  margin: 10px;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+.slidershow .dots li.active{
+  width: 30px;
+}
+@media screen and (max-width: 768px){
+  .slidershow{
+      height: 400px;
+  }
+}
 
 
 
 
 
-
-
-
-
-
+/* before and after slider */
 *,
 *::after,
 *::before {
@@ -97,27 +173,22 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 iframe {
   aspect-ratio: 16/9;
 }
-
 .video-container {
   margin: 2rem;
   max-height: 300px;
 }
-
 img {
   display: block;
   max-width: 100%;
 }
-
 main {
   display: grid;
   place-items: center;
   min-height: 100vh;
 }
-
 .container {
   display: grid;
   place-content: center;
@@ -126,27 +197,23 @@ main {
   border-radius: 1rem;
   --position: 50%;
 }
-
 .image-container {
   max-width: 800px;
   max-height: 90vh;
   aspect-ratio: 1/1;
 }
-
 .slider-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: left;
 }
-
 .image-before {
   position: absolute;
   inset: 0;
   width: var(--position);
   filter: grayscale(100%)
 }
-
 .slider {
   position: absolute;
   inset: 0;
@@ -156,12 +223,10 @@ main {
   width: 100%;
   height: 100%;
 }
-
 .slider:focus-visible ~ .slider-button {
   outline: 5px solid black;
   outline-offset: 3px;
 }
-
 .slider-line {
   position: absolute;
   inset: 0;
@@ -173,7 +238,6 @@ main {
   transform: translateX(-50%);
   pointer-events: none;
 }
-
 .slider-button {
   position: absolute;
   background-color: #fff;
