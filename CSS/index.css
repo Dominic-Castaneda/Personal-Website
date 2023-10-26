@@ -87,6 +87,12 @@ hr {
   margin: 20px auto; /* Centers the line horizontally and adds spacing above and below */
 }
 
+.SecondLayer {
+  background-color: #1d1d1d50;
+  margin: 50px;
+  height: 2000px;
+}
+
 
 
 
@@ -111,8 +117,7 @@ hr {
   margin: auto;
   position: relative;
   overflow: hidden;
-  border-color: #5e5c5c;
-  border-style: solid;
+  border-style: none;
   border-width: 3px;
 }
 .slidershow .list{
