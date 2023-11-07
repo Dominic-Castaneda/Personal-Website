@@ -14,19 +14,21 @@ body {
 
 .intro {
   display: flex;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   font-size: 45px;
   color: #ffffff;
 }
 .Major {
   display: flex;
   margin-bottom: 20px;
-  color: #ffffff;
+  color: #d1d1d1;
   font-weight: bold;
+  font-size: 20px;
+
 }
 .introDescription {
   display: flex;
-  color: #ffffff;
+  color: #979797;
 }
 
 * {
