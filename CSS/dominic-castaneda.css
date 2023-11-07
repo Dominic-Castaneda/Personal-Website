@@ -12,6 +12,7 @@ body {
     min-height: 2000px;
 }
 
+/* Home */
 .intro {
   display: flex;
   margin-bottom: 30px;
@@ -57,8 +58,6 @@ body {
   background: url('../Photo/image.png') center / 100% auto no-repeat;
   opacity: 0.1;
 }
-
-
 
 .nav {
   width: 100%;
@@ -135,6 +134,87 @@ body {
   margin-top: 20px;
 }
 
+
+
+/* About */
+.about {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.about h2 {
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  color: #ffffff;
+
+}
+
+.about p {
+  margin-bottom: 2rem;
+  color: #d1d1d1;
+}
+
+.about-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Keeps the 2x2 layout */
+  gap: 20px; /* Adjust space between images if needed */
+}
+
+.gallery-image {
+  width: auto; /* Adjust to 'auto' or a specific size if needed */
+  height: 250px; /* Adjust the height as needed */
+  object-fit: cover; /* This will cover the area of the div without stretching */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+}
+
+.about-text {
+  max-width: 500px; /* Adjust width as needed */
+}
+
+.about-stats {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.stats {
+  text-align: center;
+}
+
+.number {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.descriptor {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.btn {
+  background-color: #007bff; /* Adjust button color as needed */
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 20px;
+}
 
 
 
