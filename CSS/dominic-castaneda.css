@@ -370,7 +370,7 @@ hr {
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+  overflow: none; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
@@ -416,6 +416,7 @@ hr {
   cursor: pointer;
   opacity: 0.8; /* Optional: Gives a slight visual feedback on hover */
 }
+
 
 
 
