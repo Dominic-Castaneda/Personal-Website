@@ -310,10 +310,19 @@ hr {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+.project-images {
+  display: flex;
+  justify-content: center; /* Center the images in case they have different widths */
+  align-items: center; /* Align the images vertically */
+}
+
 .project-image {
-  width: 50%;
+  width: 50%; /* Each image takes up half the width of the container */
   height: auto; /* Maintain aspect ratio */
   display: block; /* Removes bottom space under the image */
+  /* Remove any margin or padding that might create gaps */
+  margin: 0;
+  padding: 0;
 }
 
 .project-info {
