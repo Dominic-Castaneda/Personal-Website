@@ -498,6 +498,93 @@ hr {
 
 
 
+/* Contact */
+.contact-section {
+  padding: 40px 0;
+  background: #6464645d;
+  margin-left: 50px;
+  margin-right: 50px;
+  border: 1px solid #ffffff;
+}
+
+.contact-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group label:after {
+  content: ' *';
+  color: red;
+  display: inline;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.form-group textarea {
+  height: 150px; /* Increased height for the message box */
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px; /* Additional space above the submit button */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.submit-btn:hover {
+  background: #0056b3;
+}
+
+/* Optional: Hide the asterisk for non-required labels */
+label:not([for="name"]):not([for="email"]):not([for="message"]):after {
+  content: '';
+  color: transparent;
+}
+
+
+/* Footer */
+.footer {
+  background-color: #333; /* Dark background for the footer */
+  color: #fff; /* Light text color for contrast */
+  text-align: center; /* Center the text */
+  padding: 10px 0; /* Some padding top and bottom */
+  margin-top: 30px; /* Add a bit of margin above the footer, if needed */
+}
+
+.footer p {
+  margin: 0; /* Reset default paragraph margins */
+  padding: 0; /* Reset default paragraph padding */
+  font-size: 0.8em; /* Smaller font size for the footer text */
+}
 
 
 
