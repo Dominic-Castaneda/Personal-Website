@@ -355,6 +355,158 @@ hr {
 }
 
 
+/* Experience */
+.experience {
+  color: #ffffff; /* Change to desired text color */
+  padding: 40px 0; /* Adjust padding to space out the section */
+}
+
+.experience .container {
+  max-width: 1200px; /* Adjust max width as needed */
+  margin: auto; /* Centers the container */
+  padding: 0 20px; /* Padding on the sides */
+}
+
+.experience h2 {
+  text-align: center; /* Centers the section heading */
+  font-size: 2.5rem; /* Large font size for the heading */
+  margin-bottom: 20px; /* Spacing after the heading */
+}
+
+.experience-content {
+  display: flex;
+  flex-direction: column; /* Stacks the experience entries vertically */
+}
+
+.experience-entry {
+  background-color: #575757; /* Slightly different background for entry */
+  padding: 20px; /* Padding inside each entry */
+  margin-bottom: 20px; /* Spacing between entries */
+  border-left: 4px solid #5b9bd5; /* Highlight bar on the left */
+  position: relative; /* For positioning the pseudo-element */
+}
+
+.experience-entry h3 {
+  font-size: 1.5rem; /* Font size for job title */
+  margin-bottom: 5px; /* Spacing after job title */
+}
+
+.experience-entry h4 {
+  font-size: 1.2rem; /* Font size for company name */
+  color: #666; /* Different color for company name */
+  margin-bottom: 5px; /* Spacing after company name */
+}
+
+.experience-entry .time-period {
+  font-style: italic; /* Italic font style for time period */
+  color: #999; /* Grey color for time period */
+  margin-bottom: 15px; /* Spacing after time period */
+}
+
+.experience-entry .job-description {
+  line-height: 1.6; /* Line height for readability */
+}
+
+
+
+
+/* Blog Section */
+.blog-section {
+  padding: 40px 0; /* Spacing around the section */
+}
+
+.blog-section .container {
+  width: auto; /* Allows the container to grow as needed */
+  margin: auto;
+  padding: 0; /* Adjust padding as needed, but remove if it's causing too much space */
+}
+
+.blog-section .container h2 {
+  color: #ffffff;
+}
+
+.blog-section .container h3 {
+  color: #d1d1d1;
+}
+
+.blog-section h2 {
+  text-align: center; /* Center the title */
+  font-size: 2.5rem; /* Size of the section title */
+  color: #333; /* Title color */
+  margin-bottom: 30px; /* Spacing after the title */
+}
+
+.blog-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Create three columns */
+  gap: 0px; /* Adjust the gap as needed */
+  justify-content: center; /* Center grid items if they don't fill the row */
+}
+
+.blog-entry {
+  max-width: 300px; /* Set the max width for the blog entry */
+  margin: auto; /* Center the entry in the grid area */
+  background-color: #242424;
+  padding: 20px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.blog-entry:hover {
+  transform: translateY(-5px);
+}
+
+.blog-image {
+  width: 100%; /* Full width of the entry */
+  height: auto; /* Maintain aspect ratio */
+  border-bottom: 1px solid #ddd; /* Separating line between image and text */
+  margin-bottom: 15px; /* Spacing after the image */
+}
+
+.blog-entry h3 {
+  font-size: 1.5rem; /* Title size within the entry */
+  margin-bottom: 10px; /* Spacing after the title */
+}
+
+.blog-date {
+  font-style: italic; /* Italicize the date */
+  font-size: 13px;
+  color: #666; /* Color for the date */
+  margin-bottom: 15px; /* Spacing after the date */
+}
+
+.blog-snippet {
+  line-height: 1.6; /* Spacing for the snippet text */
+  margin-bottom: 15px; /* Spacing after the snippet */
+  color: #868686;
+}
+
+.read-more-btn {
+  text-decoration: none; /* No underline for the link */
+  color: #007bff; /* Color for the link */
+  font-weight: bold; /* Bold font for the link */
+  transition: color 0.3s ease-in-out; /* Transition for hover color change */
+}
+
+.read-more-btn:hover {
+  color: #0056b3; /* Darker color on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -424,8 +576,6 @@ hr {
   cursor: pointer;
   opacity: 0.8; /* Optional: Gives a slight visual feedback on hover */
 }
-
-
 
 
 
