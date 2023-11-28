@@ -88,7 +88,6 @@ hr {
 }
 
 .SecondLayer {
-  background-color: #1d1d1d50;
   margin-left: 50px;
   margin-right: 50px;
   height: 800px;
@@ -104,8 +103,6 @@ hr {
   text-decoration-color: #ffffff;
   display: flex;
   justify-content: center;
-  padding-top: 30px;
-  padding-bottom: 10px;
 }
 
 
@@ -187,8 +184,6 @@ hr {
 /* Contact */
 .contact-section {
   padding: 40px 0;
-  background: #353535;
-  border: 1px solid rgba(255, 255, 255, 0.089);
   display: grid;
   place-content: center;
 }
