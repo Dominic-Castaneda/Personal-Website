@@ -47,28 +47,23 @@
     <div class="slidershow">
       <div class="list">
           <div class="item">
-            <a href="/services/">
-              <img src="../Photo/after.jpg" alt="Services?">
+            <a href="/contact-us/">
+              <img src="../Photo/Snow flyer.png" alt="Services?">
             </a>
           </div>
           <div class="item">
-            <a href="/services/">
-              <img src="../Photo/after.jpg" alt="Services?">
+            <a href="/contact-us/">
+              <img src="../Photo/snowremoval.jpg" alt="Services?">
             </a>
           </div>
           <div class="item">
-            <a href="/services/">
-              <img src="../Photo/after.jpg" alt="Services?">
+            <a href="/contact-us/">
+              <img src="../Photo/iceremoval.jpg" alt="Services?">
             </a>
           </div>
           <div class="item">
-            <a href="/services/">
-              <img src="../Photo/after.jpg" alt="Services?">
-            </a>
-          </div>
-          <div class="item">
-            <a href="/services/">
-              <img src="../Photo/after.jpg" alt="Services?">
+            <a href="/contact-us/">
+              <img src="../Photo/salting.jpg" alt="Services?">
             </a>
           </div>
       </div>
@@ -87,129 +82,76 @@
   </div>
 
 
-
-  
-
-
-
-
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
   <br>
 
 
-
-  <!-- Before and After -->
-  <main>
+  <!-- Contact -->
+  <section id="contact" class="contact-section">
     <div class="container">
-      <div class="image-container">
-        <img
-          class="image-before slider-image"
-         src="../Photo/before.jpg"
-          alt="color photo"
-        />
-        <img
-          class="image-after slider-image"
-          src="../Photo/after.jpg"
-          alt="black and white"
-        />
-      </div>
-      <!-- step="10" -->
-      <input
-        type="range"
-        min="0"
-        max="100"
-        value="50"
-        aria-label="Percentage of before photo shown"
-        class="slider"
-      />
-      <div class="slider-line" aria-hidden="true"></div>
-      <div class="slider-button" aria-hidden="true">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="30"
-          height="30"
-          fill="currentColor"
-          viewBox="0 0 256 256"
-        >
-          <rect width="256" height="256" fill="none"></rect>
-          <line
-            x1="128"
-            y1="40"
-            x2="128"
-            y2="216"
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="16"
-          ></line>
-          <line
-            x1="96"
-            y1="128"
-            x2="16"
-            y2="128"
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="16"
-          ></line>
-          <polyline
-            points="48 160 16 128 48 96"
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="16"
-          ></polyline>
-          <line
-            x1="160"
-            y1="128"
-            x2="240"
-            y2="128"
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="16"
-          ></line>
-          <polyline
-            points="208 96 240 128 208 160"
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="16"
-          ></polyline>
-        </svg>
-      </div>
+        <h2>Contact Me</h2>
+        <form name="UndergradLandscaping Contact Me" method="POST" data-netlify="true" class="forms">
+            <input type="hidden" name="form-name" value="Personal Portfolio Contact Me" />
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="number">Phone Number</label>
+                <input type="text" id="number" name="number" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
     </div>
-  </main>
+  </section>
+
+
+
+
+  <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Undergrad Landscaping. All Rights Reserved.</p>
+        </div>
+    </footer>
 
 
 
   <script src="../JS/loadNavbar.js"></script>
   <script src="../JS/index.js"></script>
   <script src="../JS/identityHandlers.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var phoneInput = document.getElementById('number');
+  
+      phoneInput.addEventListener('input', function(e) {
+        var input = e.target.value.replace(/\D/g, ''); // Remove all non-digit characters
+        var formattedInput = '';
+  
+        // Add the formatting as needed
+        if (input.length > 0) {
+          formattedInput += '(' + input.substring(0, 3);
+        }
+        if (input.length >= 4) {
+          formattedInput += ')-' + input.substring(3, 6);
+        }
+        if (input.length >= 7) {
+          formattedInput += '-' + input.substring(6, 10);
+        }
+  
+        e.target.value = formattedInput;
+      });
+    });
+  </script>
+  
+
 </body>
 
 </html>

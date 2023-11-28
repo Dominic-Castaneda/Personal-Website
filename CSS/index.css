@@ -89,12 +89,10 @@ hr {
 
 .SecondLayer {
   background-color: #1d1d1d50;
-  margin: 50px;
-  height: 2000px;
+  margin-left: 50px;
+  margin-right: 50px;
+  height: 800px;
 }
-
-
-
 
 #SlideShowTitle {
   color: rgb(219, 217, 217);
@@ -106,14 +104,16 @@ hr {
   text-decoration-color: #ffffff;
   display: flex;
   justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 10px;
 }
 
 
 /* Slide Show */
 .slidershow{
-  width: 1300px;
+  width: 1000px;
   max-width: 100vw;
-  height: 700px;
+  height: 600px;
   margin: auto;
   position: relative;
   overflow: hidden;
@@ -130,7 +130,7 @@ hr {
   transition: 1s;
 }
 .slidershow .list img{
-  width: 1300px;
+  width: 1000px;
   max-width: 100vw;
   height: 100%;
   object-fit: cover;
@@ -184,93 +184,94 @@ hr {
 
 
 
-
-
-/* before and after slider */
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-iframe {
-  aspect-ratio: 16/9;
-}
-.video-container {
-  margin: 2rem;
-  max-height: 300px;
-}
-img {
-  display: block;
-  max-width: 100%;
-}
-main {
-  display: grid;
-  place-items: center;
-  min-height: 100vh;
-}
-.container {
+/* Contact */
+.contact-section {
+  padding: 40px 0;
+  background: #353535;
+  border: 1px solid rgba(255, 255, 255, 0.089);
   display: grid;
   place-content: center;
-  position: relative;
-  overflow: hidden;
-  border-radius: 1rem;
-  --position: 50%;
 }
-.image-container {
-  max-width: 800px;
-  max-height: 90vh;
-  aspect-ratio: 1/1;
+
+.contact-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #ffffff;
 }
-.slider-image {
+
+.contact-form {
+  max-width: 300px;
+  margin: auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group label:after {
+  content: ' *';
+  color: red;
+  display: inline;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  width: 600px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.form-group textarea {
+  height: 150px; /* Increased height for the message box */
+}
+
+.submit-btn {
+  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: left;
-}
-.image-before {
-  position: absolute;
-  inset: 0;
-  width: var(--position);
-  filter: grayscale(100%)
-}
-.slider {
-  position: absolute;
-  inset: 0;
+  padding: 15px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  opacity: 0;
-  /* for Firefox */
-  width: 100%;
-  height: 100%;
+  margin-top: 20px; /* Additional space above the submit button */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
-.slider:focus-visible ~ .slider-button {
-  outline: 5px solid black;
-  outline-offset: 3px;
+
+.submit-btn:hover {
+  background: #0056b3;
 }
-.slider-line {
-  position: absolute;
-  inset: 0;
-  width: .2rem;
-  height: 100%;
-  background-color: #fff;
-  /* z-index: 10; */
-  left: var(--position);
-  transform: translateX(-50%);
-  pointer-events: none;
+
+/* Optional: Hide the asterisk for non-required labels */
+label:not([for="name"]):not([for="number"]):not([for="email"]):not([for="message"]):after {
+  content: '';
+  color: transparent;
 }
-.slider-button {
-  position: absolute;
-  background-color: #fff;
-  color: black;
-  padding: .5rem;
-  border-radius: 100vw;
-  display: grid;
-  place-items: center;
-  top: 50%;
-  left: var(--position);
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  /* z-index: 100; */
-  box-shadow: 1px 1px 1px hsl(0, 50%, 2%, .5);
+
+
+
+
+
+/* Footer */
+.footer {
+  background-color: #333; /* Dark background for the footer */
+  color: #fff; /* Light text color for contrast */
+  text-align: center; /* Center the text */
+  padding: 10px 0; /* Some padding top and bottom */
+  margin-top: 0px; /* Add a bit of margin above the footer, if needed */
+}
+
+.footer p {
+  margin: 0; /* Reset default paragraph margins */
+  padding: 0; /* Reset default paragraph padding */
+  font-size: 0.8em; /* Smaller font size for the footer text */
 }
