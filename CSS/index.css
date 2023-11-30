@@ -344,6 +344,7 @@ a {
   padding: 20px; /* Padding around the content */
   margin-top: 80px;
   width: 1100px;
+  height: 500px;
   text-align: center;
 }
 
@@ -363,6 +364,7 @@ a {
   height: auto; /* Maintain aspect ratio */
   border-radius: 10px; /* Optional: Adds rounded corners to the image */
 }
+
 
 
 
