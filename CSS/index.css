@@ -192,19 +192,31 @@ hr {
 .passes-section {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 65px;
   padding: 20px;
   flex-wrap: wrap;
 }
 
 .pass {
-  background-color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: #ffffff;
+  border-radius: 30px;
+  border-style: double;
+  border-width: 13px;
+  box-shadow: 10px 10px 20px rgba(255, 255, 255, 0.5);
   padding: 20px;
   text-align: center;
-  width: 300px; /* Adjust width as needed */
+  width: 240px; /* Adjust width as needed */
   position: relative; /* For the best-value tag positioning */
+}
+
+.singleday-pass{
+  border-color: #009fdf;
+}
+.day-pass{
+  border-color: gold;
+}
+.blizzard-week-pass{
+  border-color: #000;
 }
 
 .pass h2 {
@@ -215,7 +227,10 @@ hr {
 }
 
 #single-pass h2 { background-color: #009fdf; }
-#blizzard-week-pass h2 { background-color: #000; }
+#blizzard-week-pass h2 {
+  background-color: #000;
+  font-size: 23px;
+}
 .best-value h2 { background-color: gold; }
 
 .pass-duration, .pass-price {
@@ -231,12 +246,11 @@ hr {
 }
 
 .pass-features li {
-  background: #f2f2f2;
-  margin: 5px 0;
-  padding: 5px 10px;
+  padding: 3px 10px;
   border-radius: 5px;
   display: flex;
   align-items: center;
+  font-size: 16px;
 }
 
 .checkmark {
@@ -247,6 +261,12 @@ hr {
 .cross {
   color: red;
   margin-right: 5px;
+}
+
+.bullet {
+  color: #000;
+  margin-right: 9px;
+  margin-left: 3px;
 }
 
 .btn.buy-now {
@@ -260,6 +280,11 @@ hr {
   margin-top: 15px;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .btn.buy-now:hover {
   background-color: rgb(238, 58, 58);
 }
@@ -268,31 +293,31 @@ hr {
 .best-value-tag {
   position: absolute;
   top: -10px;
-  right: -10px;
-  background: #ffd700;
+  right: -40px;
+  background: rgb(216, 15, 15);
   color: #fff;
   padding: 5px 10px;
   border-radius: 5px;
   font-weight: bold;
-  font-size: 0.8em;
-  transform: rotate(15deg);
+  font-size: 1.0em;
+  transform: rotate(13deg);
 }
 
 /* Enhanced styling for the best deal pass */
 .best-value {
-  transform: scale(1.05);
+  transform: scale(1.10);
   z-index: 10;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  box-shadow: 20px 20px 20px rgba(255, 255, 255, 0.5);
 }
 
 /* Adjust the buy-now button for the best deal to stand out */
 .best-value .btn.buy-now {
-  background-color: gold;
+  background-color: rgb(216, 15, 15);
   font-weight: bold;
 }
 
 .best-value .btn.buy-now:hover {
-  background-color: #e6ba00;
+  background-color: rgb(238, 58, 58);
 }
 
 @media (max-width: 768px) {
@@ -305,6 +330,40 @@ hr {
     margin-bottom: 20px;
   }
 }
+
+
+
+
+/* Example Cost Calculation Section Styles */
+.example-cost-section {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px; /* Rounded corners */
+  border-style: double;
+  border-width: 5px;
+  border-color: black;
+  padding: 20px; /* Padding around the content */
+  margin-top: 80px;
+  width: 1100px;
+  text-align: center;
+}
+
+.example-content {
+  display: flex; /* Enables Flexbox */
+  align-items: center; /* Vertically aligns items in the middle */
+  justify-content: space-between; /* Spaces out the children elements */
+  gap: 20px; /* Optional: Adds space between image and description */
+}
+
+.example-image, .example-description {
+  flex: 1; /* Each child takes up equal space */
+}
+
+.example-image img {
+  max-width: 100%; /* Ensures the image is responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional: Adds rounded corners to the image */
+}
+
 
 
 
