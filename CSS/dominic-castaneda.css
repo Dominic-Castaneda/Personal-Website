@@ -11,6 +11,11 @@ body {
     align-items: center;
 }
 
+a {
+  color: #ffffff47;
+
+}
+
 hr {
   border: none;  /* Removes default border */
   height: 2px;   /* Sets the thickness of the line */
