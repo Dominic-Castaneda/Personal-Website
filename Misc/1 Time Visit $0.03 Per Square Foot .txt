@@ -1,0 +1,16 @@
+1 Time Visit: $0.03 Per Square Foot for anything up to 6in of snow.
+	      Extra $0.005 for every inch after.
+		
+		Ex. 1,190ft^2 x $0.03 = $35.7
+
+Daily Rate: $0.02 Per Square Foot for 3 visits up to 6in for the first visit.
+	    Extra $0.0025 for every inch after.
+		
+		Ex. (1,190ft^2 x $0.02) x 3 = $71.4
+
+Weekly Rate: $0.02 Per Square Foot for 3 Big visits
+             $0.015 for the next 4 Small visits. 78.54
+
+		Ex. (1,190ft^2 x $0.022) x 3 = $71.4
+		    (1,190ft^2 x $0.015) x 4 = $71.4
+                                            += $142.8
